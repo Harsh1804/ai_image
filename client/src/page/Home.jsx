@@ -1,6 +1,6 @@
 
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
-
+import { logov2 } from '../assets';
 import React, { useEffect, useState } from 'react';
 import { Card, FormField, Loader } from '../components';
 
@@ -133,12 +133,59 @@ const Home = () => {
           </>
         )}
       </div>
+
+      <footer className="relative bg-blueGray-200 pt-8 pb-6">
+        <div className="container rounded-lg bg-[#353935] mx-auto px-4 pt-8 ">
+          <div className="flex flex-wrap text-left lg:text-left">
+            <div className="w-full px-4">
+            <Link to="/">
+              <img src={logov2} alt="logo" className="w-50 object-contain py-8" />
+              </Link>
+              <div className="w-full flex justify-between ">
+                <div>
+                <h5 className="text-lg text-[white] lg:w-8/12 mt-0 mb-2 text-[24px] ">Our hope is that Imaginefy will empower people to express themselves creatively. Imaginefy also helps us understand how advanced AI systems see and understand our world, which is critical to our mission of creating AI that benefits humanity.</h5>
+              
+                </div>
+                
+                  <div className="w-full lg:w-6/12 text-[white] px-4">
+              <div className="flex flex-wrap items-top mb-6">
+                <div className="w-full lg:w-8/12 px-4 ml-auto ">
+                  <span class="block uppercase text-[18] font-normal mb-2">Useful Links</span>
+                  <ul className="list-unstyle">
+                    <li><a class="hover:text-[#00ADE1] transition delay-150 font-inter font-normal block pb-2 text-[18px]" href="/report">Report</a></li>
+                    <li><a class="hover:text-[#00ADE1] transition delay-150  font-normal block pb-2 text-[18px]" href="https://github.com/Harsh1804/ai_image">Github</a></li>
+                    <li><a class="hover:text-[#00ADE1] transition delay-150  font-normal block pb-2 text-[18px]" href="/aboutus">About us</a></li>
+                  </ul>
+                
+
+              </div>
+            </div>
+            </div>
+              </div>
+              
+            </div>
+            
+          </div>
+          <hr class="my-6 border-blueGray-300"></hr>
+          <div className="flex flex-wrap  items-center md:justify-between justify-center">
+              <div className="w-full md:w-4/12 px-4 mx-auto text-[white] text-center">
+                <div className="text-sm mb-8 text-blueGray-500 font-semibold py-1">
+                Copyright © <span id="get-current-year">2023</span><a href="" class="hover:text-[#00ADE1] transition delay-150" > Imaginefy </a>
+                <a class=""> by Harsh & Jay</a>
+                </div>
+              </div>
+          </div>
+
+        </div>
+      </footer>
+
     </section>
   );
   <main className="sm:p-8 px-4 py-8 w-full bg-[#f9fafe] min-h-[calc(100vh-73px)]">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/create-post" element={<CreatePost />} />
+        <Route path="/aboutus" element={<Aboutus />} />
       </Routes>
     </main>
 };

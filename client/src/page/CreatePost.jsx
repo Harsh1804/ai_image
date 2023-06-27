@@ -77,10 +77,12 @@ const CreatePost = () => {
   };
 
   return (
-    <section className="max-w-7xl mx-auto">
+    <section className="max-w-7xl mx-auto mt-16">
       <div>
-        <h1 className="font-extrabold text-[#222328] text-[32px]">Create</h1>
-        <p className="mt-2 text-[#666e75] text-[14px] max-w-[500px]">Generate an imaginative image through DALL-E AI and share it with the community</p>
+        <h1 className="text-center flex justify-center font-extrabold text-[#222328] text-[32px] " >Generate Image: Unleash Your <span className="text-[#00ADE1] italic hover:not-italic px-2 ransition delay-150">Creative </span> Vision</h1>
+        <div className="flex justify-center mt-2 text-[#666e75] text-[18px] ">
+        <p className="w-[720px] text-center">Transform your imagination into reality with our cutting-edge AI-powered image generator, pushing the boundaries of visual expression for artists, designers, creators and share it with the community</p>
+        </div>
       </div>
 
       <form className="mt-16 max-w-3xl" onSubmit={handleSubmit}>
